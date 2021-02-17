@@ -1,0 +1,18 @@
+; 2's compliment of 16 bit number
+
+jmp start
+;code
+start: LDA 2202H
+MVI C, 00H
+CMA
+ADI 01H
+STA 2204H
+
+;whether is carry present or not in starting 8 bits's 2's compliment : check
+JNC GO ;JNC means is we have no query
+INR C
+GO: LDA 2201H
+CMA
+ADD C
+STA 2203H
+hlt
