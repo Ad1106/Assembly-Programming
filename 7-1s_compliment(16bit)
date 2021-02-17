@@ -1,0 +1,11 @@
+; 1's compliment of 16 bit number
+
+jmp start
+;code
+start: LDA 2222H
+CMA
+STA 2224H
+LDA 2223H
+CMA
+STA 2225H
+hlt
