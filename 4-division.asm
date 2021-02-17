@@ -1,0 +1,19 @@
+; division
+
+jmp start;
+;data
+
+;code
+start: LDA 2202H
+MOV B,A
+MVI C,00H
+LDA 2203H
+AHEAD: CMP B
+JC GO
+INR C
+SUB B
+JMP AHEAD
+GO: STA 2205H
+MOV A,C
+STA 2204H
+hlt
